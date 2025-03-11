@@ -1,0 +1,306 @@
+:root {
+    --background-color: #1a1a1a;
+    --background-secondary-color: #FF6B6B;
+    --background-form-color: rgba(255,255,255,0.03);
+    --background-input-color: rgba(255,255,255,0.05);
+    --background-input-secondary-color: rgba(255,255,255,0.08);
+    --background-select-color: rgba(20,0,0,0.5);
+    --background-select-secondary-color: rgba(20,0,0,0.4);
+    
+    --border-form-color: rgba(255,107,107,0.1);
+    --border-form-hover-color: rgba(255,107,107,0.3);
+    --border-input-color: #333;
+    --border-checkbox-color: #666;
+    --border-upload-area-color: #666;
+
+    --main-shadow-color: rgba(255, 107, 107, 0.3);
+
+    /* fonts */
+    --Primary-Font-color: white;
+    --Red-font-color: #FF6B6B;
+    --Secondary-Font-color: #666;
+}
+
+.cinematic-store-section {
+    padding: 6rem 0;
+    background: var(--background-color);
+}
+
+.store-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.store-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.store-header h2 {
+    font-size: 2.5rem;
+    color: var(--Red-font-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.store-header p {
+    color: var(--Secondary-Font-color);
+    font-size: 1.1rem;
+}
+
+.cinematic-filters {
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255,107,107,0.1);
+    border: 1px solid var(--Red-font-color);
+    color: var(--Red-font-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--Red-font-color);
+    color: var(--Primary-Font-color);
+}
+
+.price-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.priceRange {
+    height: 4px;
+    background: var(--border-input-color);
+    border-radius: 2px;
+    position: relative;
+}
+
+.range-progress {
+    height: 100%;
+    background: var(--Red-font-color);
+    position: absolute;
+    border-radius: 2px;
+}
+
+.range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--Red-font-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.cinematic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.cinematic-item {
+    background: var(--background-form-color);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-form-color);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cinematic-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-preview {
+    height: 250px;
+    position: relative;
+    background: #000;
+}
+
+.preview-video,
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.item-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255,107,107,0.2);
+    color: var(--Red-font-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.audio-badge {
+    background: rgba(107,255,206,0.2);
+    color: #6BFFCE;
+}
+
+.item-like {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(26,26,26,0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--Red-font-color);
+    cursor: pointer;
+}
+
+.item-info {
+    padding: 1.5rem;
+}
+
+.item-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.item-category {
+    color: var(--Red-font-color);
+    font-size: 0.9rem;
+    background: rgba(255,107,107,0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+.item-stats {
+    display: flex;
+    gap: 0.8rem;
+    color: var(--Secondary-Font-color);
+    font-size: 0.9rem;
+}
+
+.item-desc {
+    color: #aaa;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-pricing {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: var(--Red-font-color);
+    font-weight: 600;
+}
+
+.old-price {
+    color: var(--Secondary-Font-color);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.cart-btn {
+    background: linear-gradient(135deg, var(--Red-font-color), #FF8E53);
+    border: none;
+    color: var(--Primary-Font-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--main-shadow-color);
+}
+
+
+/* MARK: Pagination  */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--border-input-color); 
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--Primary-Font-color);  
+    background: var(--background-input-secondary-color);
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.pagination-btn.active {
+    background-color: var(--Red-font-color);
+    color: var(--Primary-Font-color);
+    border-color: var(--Red-font-color);
+}
+
+.pagination-btn:hover {
+    background-color: rgba(255, 107, 107, 0.3); 
+    color: var(--Primary-Font-color);
+}
+
+/* MARK: @media */
+@media (max-width: 768px) {
+    .pagination {
+        flex-direction: column; 
+    }
+
+    .pagination-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cinematic-filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .store-header h2 {
+        font-size: 2rem;
+    }
+    
+    .item-preview {
+        height: 200px;
+    }
+}

@@ -1,0 +1,257 @@
+:root {
+    --background-color: #1a1a1a;
+    --background-secondary-color: #FF6B6B;
+    --background-hero-bg: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    --background-achievement-color: rgba(255,255,255,0.03);
+    --background-team-color: rgba(255,255,255,0.03);
+    --background-social-color: rgba(26,26,26,0.9);
+    --background-cta-gradient-color: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    
+    
+    --border-achievement-color: rgba(255,107,107,0.1);
+    --border-cta-color: rgba(255,107,107,0.1);
+
+    --main-shadow-color: rgba(255, 107, 107, 0.3);
+
+    /* fonts */
+    --Primary-Font-color: white;
+    --Red-font-color: #FF6B6B;
+    --Secondary-Font-color: #aaa;
+    --Third-Font-color: #ccc;
+    --Bio-Font-color: #666;
+    --gradient-Font-color: linear-gradient(45deg, #FF6B6B, #FF8E53);
+}
+
+
+.about-section {
+    background: var(--background-color);
+    color: var(--Primary-Font-color);
+}
+
+.about-content {
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* MARK: Hero_sect */
+.about-hero {
+    background: var(--background-hero-bg);
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-Font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    color: var(--Secondary-Font-color);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* MARK: Mission */
+.mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.accent-line {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.accent-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--background-secondary-color);
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    color: var(--Third-Font-color);
+    line-height: 1.6;
+    margin: 2rem 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.achievement-card {
+    background: var(--background-achievement-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--border-achievement-color);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.count {
+    display: block;
+    font-size: 2rem;
+    color: var(--Red-font-color);
+    font-weight: 700;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* MARK: Team */
+.team-section {
+    padding: 4rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    text-align: center;
+    background: var(--background-team-color);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-socials {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    background: var(--background-social-color);
+    padding: 1rem;
+    transition: bottom 0.3s;
+}
+
+.team-member:hover .member-socials {
+    bottom: 0;
+}
+
+.member-socials a {
+    color: var(--Red-font-color);
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.position {
+    color: var(--Red-font-color);
+    margin: 0.5rem 0;
+}
+
+.bio {
+    color: var(--Bio-Font-color);
+    line-height: 1.6;
+}
+
+/* MARK: Technology */
+.tech-section {
+    padding: 4rem 0;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-card {
+    background: var(--background-team-color);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tech-card:hover {
+    transform: scale(1.04);
+}
+
+.tech-card img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+/* MARK: Action */
+.about-cta {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-cta-color);
+    margin-top: 4rem;
+}
+
+.cta-button {
+    background: var(--background-cta-gradient-color);
+    color: var(--Primary-Font-color);
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .mission-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .member-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
